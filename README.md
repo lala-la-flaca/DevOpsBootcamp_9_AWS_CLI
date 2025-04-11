@@ -18,8 +18,8 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
 ## 🎯 Features
 
 - **Install and configure AWS CLI**
-- **Create and manage IAM Users, groups, and Policies using CLI**
 - **Create and configure EC2 using CLI**.
+- **Create and manage IAM Users, groups, and Policies using CLI**
 - **Generate and Manage SSH key pairs using CLI**.
 - **Security Group Configuration**.
 - **Browse and list AWS resources using CLI**
@@ -56,3 +56,188 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
    ```
    
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/03%20To%20double%20check%20credentials.png" width=800 />
+
+### Creating an EC2 Instance Using CLI
+1. List existing security groups.
+
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+3. List current VPCs.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+5. Create a new security group named my-sg.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+7. Verify the configuration of the newly created security group.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+9. Update the security group’s inbound rules to allow SSH (port 22) access from your IP address.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+11. Create a new key pair.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+13. List available subnets.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+15. Launch a new EC2 instance using the previously defined parameters.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+17. Modify permissions for the key pair file to ensure secure access.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+19. Display the EC2 instance using filters.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+21. Retrieve the EC2 instance ID using filters and queries.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+
+### Creating a Group, User, and policies.
+1. Create a group named MyGroupCli.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+3. Create a user named MyUserCli.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+5. Add MyUserCli to the group MyGroupCli.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+7. Verify the group configuration.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+9. Retrieve the ARN for the AmazonEC2FullAccess policy:
+   * From the AWS Console: Navigate to IAM > Policies, search for the policy, and view its ARN.
+     
+
+   <img src="" width=800 />
+   
+   * Via CLI using:
+     
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+10. Attach the policy to the group.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+12. Verify the policies currently attached to the group.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+14. Create a login profile for MyUserCli.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+16. Retrieve the ARN of the user.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+18. Retrieve the ARN of the group.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+20. Create a new policy to allow password changes. The JSON template can be found under IAM > Policies > IAMUserChangePassword.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+22. Generate access keys for the new user.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+24. temporarily switch AWS CLI credentials to the new user.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+26. If an error occurs (e.g., due to insufficient permissions), return to the default user by opening a new terminal session or switching profiles.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
