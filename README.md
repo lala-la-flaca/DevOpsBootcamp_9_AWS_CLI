@@ -281,7 +281,7 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
 
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_CLI/blob/main/Img/24%20creating%20access%20key%20for%20user%20new%20user.png" width=800 />
    
-25. temporarily switch AWS CLI credentials to the new user.
+25. temporarily switch AWS CLI credentials to the new user, using the access key as ENV variables.
 
     ```bash
       export AWS_ACCESS_KEY_ID=AKIA2V2OA2JTGFRNJHEA
